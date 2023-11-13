@@ -123,4 +123,4 @@ for key in data_dict.keys():
 ax.set_ylim(0, N_PLOTS)
 ax.set_xlim(FIRST, LAST + 1)
 
-fig.savefig('../img/climate-flag.png')
+fig.savefig('../img/planetary-flag.png')
