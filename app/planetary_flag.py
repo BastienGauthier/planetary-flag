@@ -11,7 +11,7 @@ from read_data import (
     get_s_biogeochimical_nitrogen,
     get_s_blue_water_consumption,
     get_s_green_water_consumption,
-    get_s_soil_use_change,
+    get_s_land_use_change,
     get_s_biosphere_integrity_genetic_diversity,
     get_s_biosphere_integrity_fonctional_diversity,
     get_s_new_entities,
@@ -73,7 +73,7 @@ data_dict = {
         "height" : 0.5
     },
     "soil_use_change" : {
-        "data" : get_s_soil_use_change(),
+        "data" : get_s_land_use_change(),
         "y0" : 6,
         "cmap" : get_warming_stripes_cmap()
     },

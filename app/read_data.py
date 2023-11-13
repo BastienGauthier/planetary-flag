@@ -49,7 +49,7 @@ def get_s_blue_water_consumption():
 def get_s_green_water_consumption():
     return get_random_data()
 
-def get_s_soil_use_change():
+def get_s_land_use_change():
     return get_random_data()
 
 def get_s_biosphere_integrity_genetic_diversity():
