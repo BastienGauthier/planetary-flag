@@ -39,8 +39,6 @@ def plot_graphic_planetary_flag(data_dict):
         data_dict, 
         axes = False
         )
-    
-    fig.savefig('../img/planetary-flag.png')
 
     return fig
 
@@ -53,6 +51,4 @@ def plot_detailled_planetary_flag(data_dict):
     
     ax.set_title("Planetary boundaries")
     
-    fig.savefig('../img/detailled-planetary-flag.png')
-
     return fig
