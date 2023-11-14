@@ -1,6 +1,5 @@
 # %%
 # Importation
-import matplotlib.pyplot as plt
 import pandas as pd
 
 from read_data import (
@@ -20,12 +19,14 @@ from read_data import (
 )
 
 from plot_stripes import get_stripes_collection
-
-from utils import get_planetary_flag_cmap, FIRST, LAST
+from visualization import (
+    plot_graphic_planetary_flag,
+    plot_detailled_planetary_flag
+)
+from utils import get_planetary_flag_cmap
 
 #%%
 # Parameters
-N_PLOTS = 9
 general_cmap = get_planetary_flag_cmap()
 
 #%%
@@ -47,7 +48,7 @@ data_dict = {
         "y0" : 1,
         "cmap" : general_cmap
     },
-    "stratosferic_ozone" : {
+    "ozone_depletion" : {
         "idx" : 3.0,
         "data" : get_s_stratosferic_ozone(data_all,df_synthesis),
         "y0" : 2,
@@ -73,41 +74,41 @@ data_dict = {
         "cmap" : general_cmap,
         "height" : 0.5
     },
-    "blue_water_consumption" : {
+    "blue_water" : {
         "idx" : 6.1,
         "data" : get_s_blue_water_consumption(data_all,df_synthesis),
         "y0" : 5,
         "cmap" : general_cmap,
         "height" : 0.5
     },
-    "green_water_consumption" : {
+    "green_water" : {
         "idx" : 6.2,
         "data" : get_s_green_water_consumption(data_all,df_synthesis),
         "y0" : 5.5,
         "cmap" : general_cmap,
         "height" : 0.5
     },
-    "land_use_change" : {
+    "land_use" : {
         "idx" : 7.0,
         "data" : get_s_land_use_change(data_all,df_synthesis),
         "y0" : 6,
         "cmap" : general_cmap
     },
-    "biosphere_integrity_genetic_diversity" : {
+    "genetic_diversity" : {
         "idx" : 8.1,
         "data" : get_s_biosphere_integrity_genetic_diversity(data_all,df_synthesis),
         "y0" : 7,
         "cmap" : general_cmap,
         "height" : 0.5
     },
-    "biosphere_integrity_fonctional_diversity" : {
+    "fonctional_diversity" : {
         "idx" : 8.2,
         "data" : get_s_biosphere_integrity_fonctional_diversity(data_all,df_synthesis),
         "y0" : 7.5,
         "cmap" : general_cmap,
         "height" : 0.5
     },
-    "new_entities" : {
+    "novel_entities" : {
         "idx" : 9.0,
         "data" : get_s_new_entities(data_all,df_synthesis),
         "y0" : 8,
@@ -137,7 +138,7 @@ for key in data_dict.keys():
         data_dict[key]["clim_max"] = s_key.color_limit_max        
 
 #%%
-#  Data stripes creation
+# Data stripes creation
 for key in data_dict.keys():
     data_dict[key]["col"] = get_stripes_collection(
                         data_dict[key]["data"],
@@ -150,17 +151,6 @@ for key in data_dict.keys():
 
 # %% 
 # plots the flag
-fig = plt.figure(figsize=(15, 10))
+fig = plot_graphic_planetary_flag(data_dict)
 
-ax = fig.add_axes([0, 0, 1, 1])
-ax.set_axis_off()
-
-# create a collection with a rectangle for each year
-for key in data_dict.keys():
-    ax.add_collection(data_dict[key]["col"])
-
-# Correct the axes and save fig
-ax.set_ylim(0, N_PLOTS)
-ax.set_xlim(FIRST, LAST + 1)
-
-fig.savefig('../img/planetary-flag.png')
+fig_detailled = plot_detailled_planetary_flag(data_dict)

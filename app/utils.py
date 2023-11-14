@@ -1,5 +1,8 @@
 from matplotlib.colors import ListedColormap
 
+## Number of limits
+N_PLOTS = 9
+
 ## Scale
 FIRST = 1850
 LAST = 2021  # inclusive
