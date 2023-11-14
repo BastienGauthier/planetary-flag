@@ -152,5 +152,7 @@ for key in data_dict.keys():
 # %% 
 # plots the flag
 fig = plot_graphic_planetary_flag(data_dict)
+fig.savefig('../img/planetary-flag.png')
 
 fig_detailled = plot_detailled_planetary_flag(data_dict)
+fig_detailled.savefig('../img/detailled-planetary-flag.png',bbox_inches='tight')
