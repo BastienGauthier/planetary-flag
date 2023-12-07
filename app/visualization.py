@@ -8,11 +8,11 @@ from utils import FIRST, LAST, N_PLOTS
 matplotlib.rcParams.update({'font.size': 22})
 
 
-def plot_planetary_flag(data_dict, axes):
+def plot_planetary_flag(data_dict, axes, figsize=(15, 10)):
 
     new_data_dict = deepcopy(data_dict)
 
-    fig = plt.figure(figsize=(15, 10))
+    fig = plt.figure(figsize=figsize)
 
     ax = fig.add_axes([0, 0, 1, 1])
     if not(axes): 
@@ -33,20 +33,22 @@ def plot_planetary_flag(data_dict, axes):
 
     return fig, ax
 
-def plot_graphic_planetary_flag(data_dict):
+def plot_graphic_planetary_flag(data_dict, figsize=(15, 10)):
 
     fig, ax = plot_planetary_flag(
         data_dict, 
-        axes = False
+        axes = False,
+        figsize = figsize
         )
 
     return fig
 
-def plot_detailled_planetary_flag(data_dict):
+def plot_detailled_planetary_flag(data_dict, figsize=(15, 10)):
 
     fig, ax = plot_planetary_flag(
         data_dict, 
-        axes = True
+        axes = True,
+        figsize = figsize
         )
     
     ax.set_title("Planetary boundaries")
