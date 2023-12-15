@@ -5,7 +5,7 @@ N_PLOTS = 9
 
 ## Scale
 FIRST = 1850
-LAST = 2021  # inclusive
+LAST = 2023  # inclusive
 
 ## Reference period for the center of the color scale
 FIRST_REFERENCE = 1971
