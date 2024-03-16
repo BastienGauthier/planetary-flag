@@ -14,7 +14,7 @@ from read_data import (
     get_s_green_water_consumption,
     get_s_land_use_change,
     get_s_biosphere_integrity_genetic_diversity,
-    get_s_biosphere_integrity_fonctional_diversity,
+    get_s_biosphere_integrity_functional_diversity,
     get_s_new_entities,
 )
 
@@ -101,9 +101,9 @@ data_dict = {
         "cmap" : general_cmap,
         "height" : 0.5
     },
-    "fonctional_diversity" : {
+    "functional_diversity" : {
         "idx" : 8.2,
-        "data" : get_s_biosphere_integrity_fonctional_diversity(data_all,df_synthesis),
+        "data" : get_s_biosphere_integrity_functional_diversity(data_all,df_synthesis),
         "y0" : 7.5,
         "cmap" : general_cmap,
         "height" : 0.5

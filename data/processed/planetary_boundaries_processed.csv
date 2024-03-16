@@ -1,4 +1,4 @@
-year,climate_change,ocean_acidification,ozone_depletion,atmospheric_aerosol,biogeochimical_phosphore,biogeochimical_nitrogen,blue_water,green_water,land_use,genetic_diversity,fonctional_diversity,novel_entities
+year,climate_change,ocean_acidification,ozone_depletion,atmospheric_aerosol,biogeochimical_phosphore,biogeochimical_nitrogen,blue_water,green_water,land_use,genetic_diversity,functional_diversity,novel_entities
 1850.0,280.0,3.47739013,284.6,0.03,0.0,0.0,9.522796945047487,10.290067027085135,100.0,1.0,2.146690518783534,0.0
 1851.0,280.315871559633,3.4759644489999997,284.708,0.030265895953757223,0.02,0.0,9.55782698278165,10.253328386432617,100.0,1.5722543352601157,2.3112701252236056,0.01
 1852.0,280.63174311926605,3.474538768,284.81600000000003,0.030531791907514448,0.04,0.0,9.458868609027158,10.17002903202294,100.0,2.1445086705202314,2.4758497316636774,0.02

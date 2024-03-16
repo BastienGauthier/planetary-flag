@@ -104,7 +104,7 @@ def get_s_biosphere_integrity_genetic_diversity(data_all,df_synthesis,idx=8.1):
     return uniformize_date(df)
 
 
-def get_s_biosphere_integrity_fonctional_diversity(data_all,df_synthesis,idx=8.2):
+def get_s_biosphere_integrity_functional_diversity(data_all,df_synthesis,idx=8.2):
     df = get_data(data_all,df_synthesis,idx)
     return uniformize_date(df)
 
