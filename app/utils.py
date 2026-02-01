@@ -5,9 +5,9 @@ N_PLOTS = 9
 
 ## Scale
 FIRST = 1850
-LAST = 2023  # inclusive
+LAST = 2025  # inclusive
 
-## Reference period for the center of the color scale
+## Reference period for the center of the warming stripes' color scale
 FIRST_REFERENCE = 1971
 LAST_REFERENCE = 2000
 
